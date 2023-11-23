@@ -24,13 +24,22 @@
 
 body {
    
-    background-image: url("/images/background_site_mobile.jpg");
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    height: 100vh;
+background-image: url("../../images/background_site_mobile.jpg");
+   
+background-position: center center;
+   
+background-repeat: no-repeat;
+   
+background-attachment: fixed;
+   
+background-size: cover;
+   
+height: 100vh;
+   
     width: 100vw;
+    width: 100vw;
+ 
+width: 100vw;
  
   }
 
@@ -52,6 +61,10 @@ body {
     transform: translateY(-50%);
   }
 
+  .imageLogoMain{
+    width: 300px;
+  }
+
   .MainText{
     max-width: 80%;
     min-width: 320px;
@@ -67,6 +80,30 @@ body {
     line-height: 1.4em;
     z-index: -1;
   }
+
+
+  .socialLinks{
+    width: 177px;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 29px;
+    z-index: 10000000;
+    animation: opacidade 1.5s forwards;
+  }
+
+  @keyframes opacidade {
+    from {opacity: 0%;}
+    to {opacity: 100%;}
+  }
+
+  .socialLinks img{
+    width: 35px;
+  }
+
+
 
   .MainText p{
     font-family: var(--mainFont);
@@ -98,17 +135,24 @@ body {
   }
 
   .MainTextDesktop{
-    display: none;
-  }
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    }
 
+
+    .MainTextDesktop h1{
+      width: 70%;
+    }
   .MainDiv{
     position: relative;
     width: 100vw;
     height: 100vh;
     text-align: center;
-    
-   
-   
 } 
 
 .onLoadImg{
@@ -200,14 +244,26 @@ body {
   @media only screen and (min-width:1100px ){
 body{
 
-  background:url(/images/background_site_desktop.jpg);
-  background-size: auto;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  
- 
+background: url(../../images/background_site_desktop.jpg);
 
+background-size: auto;
+
+background-position: center center;
+
+background-repeat: no-repeat;
+
+background-attachment: fixed;
+}
+  
+.imageLogoMain{
+  width: 500px;
+  margin-bottom: -108px;
+}
+
+.imageDesktop{
+  position: fixed;
+  z-index: 100000;
+  display: none;
 }
 .background-2 {
   opacity: 0.2;
@@ -223,12 +279,14 @@ height: 100%;
 display: flex;
 justify-content: center;
 align-items: center;
+flex-direction: column;
 }
 
 .MainTextDesktop h1{
   text-transform: uppercase;
   color: white;
-  font-size: 3em;
+  font-size: 2em;
+  margin-top: 30px;
   text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.326);
 }
 
