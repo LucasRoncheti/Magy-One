@@ -1,0 +1,101 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+:root{
+    --color01:#ef0094;
+    --color02:#0b4de0;
+    --color03:white;
+    --color04:rgba(231, 231, 231, 0.95);
+    --color05:rgba(0, 0, 0, 0.798);
+
+    --mainFont: 'Montserrat', sans-serif;
+
+
+}
+
+.midiaDiv{
+    width: 100vw;
+    height: 90vh;
+   
+
+   
+}
+
+.midiaContent{
+    width: 100%;
+    max-width: 550px;
+    padding: 130px 6% 6% 6%;
+
+    display: flex;
+    flex-direction: column;
+    
+    position: relative;
+  
+
+    background-color: var(--color04);
+   
+}
+
+.midiaContent button{
+    margin-top: 30px;
+  
+}
+
+.midiaContent p {
+    text-align: left;
+    font-size: 1em;
+    margin-top: 30px;
+}
+.midiaContent button{
+    width: 70%;
+    height: 40px;
+    padding: 20px;
+    margin: 30px auto;
+    color: var(--color01);
+    font-size: 1em;
+    border-radius: 20px;
+    border-style: none;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.192);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+h2{
+    font-size: 1.2em;
+    margin: 20px auto;
+
+}
+
+.bcgBlackMidia{
+    display: none;
+}
+ /*a responsividade  desktop começa aqui */
+ @media only screen and (min-width:1100px ){
+    
+    .bcgBlackMidia{
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        z-index: -3;
+        background-color: rgba(0, 0, 0, 0.773);
+        display: block;
+    }
+    .midiaContent{
+        max-width: 1100px;
+        margin: auto;
+    }
+
+    .midiaContent p {
+        text-align: left;
+       
+    }
+    .midiaContent button{
+        width: auto;
+        cursor: pointer;
+    }
+ }

@@ -1,0 +1,297 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+
+
+
+.containerGalleryMain{
+    width: calc(90vw - 2px);
+   height: auto; 
+   display: flex;
+   align-items: center;
+   position:relative;
+  
+    margin-top: 70px;
+   border-style: solid;
+   border: 2px;
+   border-color: black;
+
+   
+  
+}
+
+.buttonsContainer{
+    width: calc(90vw);
+    display:flex;
+    position:absolute;
+    left: 0;
+    top: -38px;
+   
+ 
+    
+}
+
+
+
+.buttonMore{
+    width: 20vw;
+    height: 40px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 0, 157);
+    bottom: 0px;
+  
+    left: calc( 70vw - 2px);
+    z-index: 3;
+}
+.buttonMore p{
+    text-align: center;
+    margin: auto;
+}
+
+
+
+.buttonImgVideoSelected{
+
+    width: calc(30vw + 2px);
+    height:40px;
+    
+    border: 2px;
+    border-style: solid;
+    border-color: rgb(255, 0, 157);
+    border-bottom:  black;
+    color:rgb(255, 0, 157);
+    background-color: black;
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+   
+}
+
+.buttonImgVideoSelected p, .buttonImgVideoUnselected p{
+  
+    margin-top: 0px;
+}
+
+.buttonImgVideoUnselected{
+    width: 30vw;
+    height:34px;
+    
+    border: 0px;
+    border-style: solid;
+    border-color:  rgb(183, 183, 183);
+    border-bottom: none;
+
+    color:rgb(225, 225, 225);
+    background-color: rgb(183, 183, 183);
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    
+    margin-top: 4px;
+
+}
+
+
+
+.galleryContainer{
+   width: calc(90vw - 2px);
+   height: 60vw; 
+   margin: auto;
+
+   background-color: rgb(0, 0, 0);
+   display: grid;
+   grid-template-columns: repeat(3, 1fr) ;
+   gap: 2px;
+
+   overflow: hidden;
+   border: 2px;
+   border-style: solid;
+   border-color: rgb(255, 0, 157);
+
+   
+}
+
+.imgfullContainer{
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 3;
+}
+.thumbNailDiv{
+    width: 30vw;
+    height: 30vw;
+
+    background-color: rgb(0, 0, 0);
+    overflow: hidden;
+    
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    
+}
+.thumbNailDiv img{
+   height: auto;
+   width: auto;
+   
+   
+}
+
+
+.spinner{
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  width: 100vw;
+  height: 100vh;
+  z-index: 3;
+  background-color: black;
+}
+.spinnerImg{
+    width: 50%;
+    height: 50%;
+}
+.imgFull{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(0, 0, 0);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+
+    display: none;
+    
+}
+
+.imgFull img{
+    width: 100vw;
+    height: auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+
+
+}
+
+.close{
+ position: absolute;
+ top: 30px;
+ left: calc(100vw - 50px);
+ color: rgb(170, 0, 79);
+ z-index: 4;
+}
+
+
+.videoOpen{
+    width:100%;
+    height: 100%;
+    background-color: black;
+    position: fixed;
+    left: 0px;
+   
+   
+    
+}
+
+.videosGalerry{
+    width: 100vw;
+    height: auto;
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    transform: translate(0%,-50%);
+   
+}
+
+.closeVideo{
+    width: 50px;
+    height: 30px;
+    position: absolute;
+    left: calc(100% - 50px);
+    top: 30px;
+    background-color: rgb(255, 0, 234);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    z-index: 3;
+    
+}
+
+.svgVideo{
+    position: absolute;
+    color: gray;
+}
+
+
+@media only screen and (min-width:1100px){
+ 
+
+    .containerGalleryMain{
+        width: auto;
+        height: 60vw;
+        cursor: pointer;
+        
+    }
+    .buttonImgVideoSelected{
+        width: 437px;
+    }
+    .buttonImgVideoUnselected{
+        width: 437px;
+    }
+
+    .thumbNailDiv{
+        width: 285px;
+        height: 218.6px;
+        margin: auto;
+        
+    }
+    .buttonMore{
+        left: 28%;
+        
+    }
+
+    .imgFull img{
+        width: auto;
+        max-height: 80vh;
+    }
+
+    .videosGalerry{
+        width: auto;
+        max-height: 80vh;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        
+       
+       
+
+    }
+   
+    .closeVideo{
+        left: calc(100% - 621px);
+        cursor: pointer;
+        border-radius: 40px;
+    }
+
+    
+  }

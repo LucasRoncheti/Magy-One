@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+
+
+
+:root{
+    --color01:#ef0094;
+    --color02:#0b4de0;
+    --color03:white;
+  
+
+    --mainFont: 'Montserrat', sans-serif;
+
+
+}
+
+body {
+   
+    background-image: url("/images/background_site_mobile.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+ 
+  }
+
+  header{
+    height: 100px;
+    width: 100vw;
+    background-color: var(--color05);
+    position: fixed;
+    z-index: 2;
+
+  }
+
+  header img{
+    width: 80px;
+    z-index: 1;
+    position: absolute;
+    top: 60px;
+    left: 15px;
+    transform: translateY(-50%);
+  }
+
+  .MainText{
+    max-width: 80%;
+    min-width: 320px;
+    width: 80%;
+    height: auto;
+    color: white;
+    text-align: left;
+    font-size: 3em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    line-height: 1.4em;
+    z-index: -1;
+  }
+
+  .MainText p{
+    font-family: var(--mainFont);
+    text-align: left;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.623);
+  }
+
+  .MainText p:nth-of-type(1){
+   letter-spacing: 0.05em;
+   font-size: 0.54em;
+   line-height: 1.8em;
+    
+  }
+ 
+  .MainText p:nth-of-type(2){
+    font-size: 1.2em;
+    line-height: 0.6em;
+  }
+  .MainText p:nth-of-type(3){
+    font-size: 1.1em;
+    line-height: 1.2em;
+    letter-spacing: 0.07em;
+  }
+  .MainText p:nth-of-type(4){
+    font-size: 0.59em;
+    line-height: 1.2em;
+    letter-spacing: 0.04em;
+    
+  }
+
+  .MainTextDesktop{
+    display: none;
+  }
+
+  .MainDiv{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    
+   
+   
+} 
+
+.onLoadImg{
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: 100;
+  animation: fadeOut 1.5s ease;
+
+}
+
+/*essa imagem só vai ser usada nafunção onload quando for carregada pela primeira vez */
+.onLoadImgFunction{
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: 100;
+ 
+
+}
+
+
+@keyframes fadeOut{
+  from{
+    opacity: 1;
+  }
+  to{
+      opacity: 0;
+  }
+}
+
+.footerinicio{
+  font-size: 2.7em;
+}
+    
+
+  footer{
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+   left: 50%;
+   bottom: 20px;
+   font-size: 1em;
+   transform: translateX(-50%);
+    color: var(--color03);
+  }
+
+
+.headerDesktop{
+  display: none;
+}
+
+/*Efeitos das linhas verticais*/
+
+.scanlines {
+  overflow: hidden;
+  mix-blend-mode: difference;
+}
+
+.scanlines::before {
+  content: "";
+  position: absolute;
+  width: 98%;
+  height: 98%;
+  top: 0;
+  left: 0;
+
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(255, 255, 255, 0.05) .5%,
+    transparent 1%
+  );
+
+  animation: fudge 7s ease-in-out alternate infinite;
+}
+
+
+@keyframes fudge {
+  from {
+    transform: translate(0px, 0px);
+  }
+  to {
+    transform: translate(0px, 2%);
+  }
+}
+
+ /*a responsividade  desktop começa aqui */
+  @media only screen and (min-width:1100px ){
+body{
+
+  background:url(/images/background_site_desktop.jpg);
+  background-size: auto;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  
+ 
+
+}
+.background-2 {
+  opacity: 0.2;
+}
+
+.MainText{
+ display: none;
+}
+
+.MainTextDesktop{
+width: 100%;
+height: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.MainTextDesktop h1{
+  text-transform: uppercase;
+  color: white;
+  font-size: 3em;
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.326);
+}
+
+/* efeitos de linhas na tela  */
+
+.scanlines {
+  overflow: hidden;
+  mix-blend-mode: difference;
+}
+
+.scanlines::before {
+  content: "";
+  position: absolute;
+  width: 98%;
+  height: 98%;
+  top: 0;
+  left: 0;
+
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(255, 255, 255, 0.05) .5%,
+    transparent 1%
+  );
+
+  animation: fudge 7s ease-in-out alternate infinite;
+}
+
+
+@keyframes fudge {
+  from {
+    transform: translate(0px, 0px);
+  }
+  to {
+    transform: translate(0px, 2%);
+  }
+}
+
+
+
+
+ header{
+  margin-top: 20px;
+  display: block;
+  height: 80px;
+ }
+
+ /* imagem logo da banda */
+ .imgHeaderDesktop{
+  display: block;
+  top: 43px;
+
+ }
+ .headerDesktop{
+  display: block;
+  width: 1000px;
+  height: 80px;
+  margin-top: 25px;
+  cursor: pointer;
+  margin: auto;
+  position:relative;
+ }
+ .imgHeaderMobile{
+  display: none;
+ }
+
+ /* lista do menu */
+.listMenu{
+  height: 100%;
+  width: 400px;
+  display: flex;
+  position: absolute;
+  right: 0;
+  
+}
+
+.itemMenu{
+  width:25% ;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0px 20px 0px;
+  justify-content: space-around;
+  align-items: center;
+  
+}
+
+.itemMenu span{
+  width: 90%;
+  height: 2.0px;
+  background-color: white;
+}
+.itemMenu p{
+  font-size: 1.0em;
+  color: white;
+}
+
+.itemMenu:hover{
+  cursor: pointer;
+}
+ /* lista da páginma principal */
+ .footerinicio{
+  font-size: 2em;
+ }
+
+
+  /* classes adicionadas quando o mouse passa por cima da lista  */
+ .onHoverParagraph{
+  color: var(--color01);
+ }
+ .onHoverSpan{
+  background-color: var(--color01);
+ }
+
+  }
